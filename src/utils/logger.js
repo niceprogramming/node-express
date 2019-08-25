@@ -1,12 +1,11 @@
 import pino from 'pino';
-import pretty from 'pino-pretty';
 
 // TODO add options and use config
 const options = {
   name: 'test',
   level: 'info',
   base: {},
-  prettyPrint: false,
+  prettyPrint: true,
 };
 
 const logger = pino(options);
