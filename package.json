@@ -2,13 +2,13 @@
   "name": "node-express",
   "version": "1.0.0",
   "main": "app.js",
-  "license": "MIT", 
+  "license": "MIT",
   "scripts": {
-    "lint": "eslint ./src/*.js",
-    "start": "babel-node app.js",
+    "lint": "eslint ./src/*.js --fix",
+    "start": "node -r @babel/register ./src/app.js",
     "build": "babel src -d build --delete-dir-on-start"
   },
-  "dependencies": {
+  "dependencies": {    
     "express": "^4.17.1"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
     "babel-eslint": "^10.0.2",
     "eslint": "^6.2.2",
     "eslint-config-airbnb-base": "^14.0.0",
